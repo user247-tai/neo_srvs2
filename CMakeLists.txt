@@ -11,24 +11,10 @@ endif()
 
 find_package(rosidl_default_generators REQUIRED)
 find_package(geometry_msgs REQUIRED)
-find_package(neo_msgs2 REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "srv/RelayBoardSetRelay.srv"
-  "srv/IOBoardSetDigOut.srv"
-  "srv/RelayBoardSetLCDMsg.srv"
-  "srv/LockPlatform.srv"
-  "srv/UnlockPlatform.srv"
-  "srv/ResetOmniWheels.srv"
-  "srv/RelayBoardSetEMStop.srv"
-  "srv/RelayBoardSetSafetyMode.srv"
-  "srv/RelayBoardUnSetEMStop.srv"
-  "srv/RelayBoardSetLED.srv"
-  "srv/USBoardToggleSensor.srv"
   "srv/Optimizer.srv"
-  "srv/InitializeContourMatching.srv"
-  "srv/SetSafetyField.srv"
-  DEPENDENCIES geometry_msgs neo_msgs2
+  DEPENDENCIES geometry_msgs
 )
 
 ament_package()
